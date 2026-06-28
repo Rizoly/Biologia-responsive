@@ -92,9 +92,11 @@ CABEÇALHO E MENU
   padding-right: 0.2rem;
   padding-bottom: 0px;
   padding-top: 0px;
+  transition: transform 0.5s ease, color 0.5s ease;
 }
 .menu a:hover {
   color: #4FC3F7;
+  transform: scale(1.1);
 }
 /* ===================================================
 BANNER PRINCIPAL (HERO)
@@ -126,6 +128,7 @@ BANNER PRINCIPAL (HERO)
   justify-content: center;
   gap: 15px;
 }
+
 .botao {
   display: inline-block;
   background: linear-gradient(120deg, #1565C0, #26A69A);
@@ -133,10 +136,18 @@ BANNER PRINCIPAL (HERO)
   padding: 12px 26px;
   border-radius: 30px;
   font-weight: bold;
+  transition: transform 0.5s ease;
 }
 .botao-contorno {
   background: transparent;
   border: 2px solid #ffffff;
+  transition: transform 0.5s ease;
+}
+.botao:hover {
+  transform: scale(1.1);
+}
+.botao-contorno:hover {
+  transform: scale(1.1);
 }
 /* ===================================================
 CARDS (usados em vários blocos do site)
