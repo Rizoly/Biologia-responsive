@@ -155,10 +155,121 @@ CARDS (usados em vários blocos do site)
   box-shadow: 0 4px 10px rgba(11, 45, 77, 0.08);
   flex: 1 1 250px;
 }
-.card .emoji {
+.card-agua h3 {
+  font-family: Boldone;
+}
+.card-agua p {
+  font-weight: bold;
+  color: #2c3a44;
+}
+.card-agua {
+  background-image: url(./imagens/AguaTextura.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #DCE6ED;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(11, 45, 77, 0.08);
+  flex: 1 1 250px;
+  transition: transform 0.7s ease;
+}
+.card-agua:hover {
+  transform: scale(1.1);
+}
+.card-vulcao h3 {
+  color: #cfe3f0;
+  font-family: Boldone;
+}
+.card-vulcao p {
+  font-weight: bold;
+  color: #ffffff;
+}
+.card-vulcao {
+  background-image: url(./imagens/magmaTextura.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #DCE6ED;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(11, 45, 77, 0.08);
+  flex: 1 1 250px;
+  transition: transform 0.7s ease;
+}
+.card-vulcao:hover {
+  transform: scale(1.1);
+}
+.card-alcalino h3 {
+  color: #000000;
+  font-family: Boldone;
+}
+.card-alcalino p {
+  font-weight: bold;
+  color: #ffffff;
+}
+.card-alcalino {
+  background-image: url(./imagens/acidoTextura.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #DCE6ED;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(11, 45, 77, 0.08);
+  flex: 1 1 250px;
+  transition: transform 0.7s ease;
+}
+.card-alcalino:hover {
+  transform: scale(1.1);
+}
+.card-solo h3 {
+  color: #000000;
+  font-family: Boldone;
+}
+.card-solo p {
+  font-weight: bold;
+  color: #13191d;
+}
+.card-solo {
+  background-image: url(./imagens/TexturaTerra.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #DCE6ED;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(11, 45, 77, 0.08);
+  flex: 1 1 250px;
+  transition: transform 0.7s ease;
+}
+.card-solo:hover {
+  transform: scale(1.1);
+}
+.card-humano h3 {
+  font-family: Boldone;
+}
+.card-humano p {
+  font-weight: bold;
+  color: #2c3a44;
+}
+.card-humano {
+  background-image: url(./imagens/HumanTexture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #DCE6ED;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(11, 45, 77, 0.08);
+  flex: 1 1 250px;
+  transition: transform 0.7s ease;
+}
+.card-humano:hover {
+  transform: scale(1.1);
+}
+.card {
   font-size: 1.8rem;
   margin-bottom: 8px;
   display: block;
+}
+.card h3 {
+  font-family: Boldone;
 }
 /* card de destaque com fundo gradiente (usado na Importância) */
 .card-destaque {
@@ -254,11 +365,9 @@ GALERIA DE ESPÉCIES
   flex: 1 1 250px;
   transition: transform 0.5s ease;
 }
-
 .galeria-card:hover {
   transform: scale(1.1);
 }
-
 .galeria-card img {
   width: 100%;
   height: 180px;
@@ -291,10 +400,15 @@ AUTORES
   font-family: Yorkmade;
   font-size: 1rem;
 }
-.autor-card h3 {
-  font-family: Yorkmade;
+.autor-card .Bh3 {
+  font-family: SanguineFrost;
   color: #1d1d1d;
   font-size: 1.8rem;
+}
+.autor-card .Eh3 {
+  font-family: Boldone;
+  color: #1d1d1d;
+  font-size: 1.2rem;
 }
 .avatar1{
   width: 80px;
@@ -308,6 +422,27 @@ AUTORES
   align-items: center;
   justify-content: center;
   margin: 0 auto 12px auto;
+  transition: transform 0.3s ease ;
+}
+.avatar1:hover {
+  transform: scale(1.3);
+}
+.avatar2{
+  width: 80px;
+  height: 80px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./imagens/enzo.jpg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+  transition: transform 0.3s ease ;
+}
+.avatar2:hover {
+  transform: scale(1.3);
 }
 /* ===================================================
 REFERÊNCIAS
@@ -387,4 +522,12 @@ Acima disso: telas de computador (desktop)
 @font-face {
   font-family: 'Yorkmade';
   src: url('./fontes/Yorkmade\ Demo.otf') format('opentype');
+}
+@font-face {
+  font-family:'Boldone';
+  src: url(./fontes/Boldone.ttf) format('truetype');
+}
+@font-face {
+  font-family:'SanguineFrost';
+  src: url(./fontes/Sanguine\ Frost.ttf) format('truetype');
 }
