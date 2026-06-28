@@ -35,13 +35,13 @@ p {
   margin-bottom: 8px;
   font-size: 1.4rem;
 }
-/* limita a largura do conteúdo e centraliza na página */
+/* limita a largura do conteudo e centraliza na pagina */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
-/* espaçamento padrão de cada seção */
+/* espaçamento padrão de cada secao */
 .secao {
   padding: 60px 0;
 }
@@ -58,7 +58,7 @@ p {
   margin: 0 auto;
 }
 /* ===================================================
-CABEÇALHO E MENU
+menu nav e cabecalho
 =================================================== */
 .cabecalho {
   background-color: #0B2D4D;
@@ -99,7 +99,7 @@ CABEÇALHO E MENU
   transform: scale(1.1);
 }
 /* ===================================================
-BANNER PRINCIPAL (HERO)
+banner principal (hero)
 =================================================== */
 .banner {
   background-image: url(./imagens/AdobeStock_128549555.jpeg);
@@ -128,7 +128,6 @@ BANNER PRINCIPAL (HERO)
   justify-content: center;
   gap: 15px;
 }
-
 .botao {
   display: inline-block;
   background: linear-gradient(120deg, #1565C0, #26A69A);
@@ -149,8 +148,8 @@ BANNER PRINCIPAL (HERO)
 .botao-contorno:hover {
   transform: scale(1.1);
 }
-/* ===================================================
-CARDS (usados em vários blocos do site)
+/*===================================================
+cards gerais (aqueles que se repetem)
 =================================================== */
 .cards {
   display: flex;
@@ -282,7 +281,6 @@ CARDS (usados em vários blocos do site)
 .card h3 {
   font-family: Boldone;
 }
-/* card de destaque com fundo gradiente (usado na Importância) */
 .card-destaque {
   background: linear-gradient(180deg, #1565C0, #26a637, #2E7D32);
   color: #ffffff;
@@ -304,7 +302,7 @@ CARDS (usados em vários blocos do site)
   color: #ffffff;
 }
 /* ===================================================
-LINHA DO TEMPO (História da descoberta)
+linha do tempo
 =================================================== */
 .linha-tempo .item {
   display: flex;
@@ -324,7 +322,6 @@ LINHA DO TEMPO (História da descoberta)
   justify-content: center;
   font-size: 0.85rem;
 }
-/* caixa de destaque com fundo levemente colorido */
 .caixa-info {
   background-color: #eaf6f4;
   border-left: 4px solid #26A69A;
@@ -333,7 +330,7 @@ LINHA DO TEMPO (História da descoberta)
   margin-top: 15px;
 }
 /* ===================================================
-COMPARAÇÃO ARQUEIAS x BACTÉRIAS
+comparacao archeas e bacterias
 =================================================== */
 .comparacao {
   display: flex;
@@ -366,7 +363,7 @@ COMPARAÇÃO ARQUEIAS x BACTÉRIAS
   margin-bottom: 3px;
 }
 /* ===================================================
-GALERIA DE ESPÉCIES
+galeria das archeas
 =================================================== */
 .galeria-card {
   background-color: #ffffff;
@@ -402,7 +399,7 @@ GALERIA DE ESPÉCIES
   margin-top: 8px;
 }
 /* ===================================================
-AUTORES
+nos
 =================================================== */
 .autor-card {
   text-align: center;
@@ -456,7 +453,7 @@ AUTORES
   transform: scale(1.3);
 }
 /* ===================================================
-REFERÊNCIAS
+referencias
 =================================================== */
 .referencias h3 {
   margin-top: 25px;
@@ -477,7 +474,7 @@ REFERÊNCIAS
   transform: scale(1.1);
 }
 /* ===================================================
-RODAPÉ
+rodape
 =================================================== */
 .rodape {
   background-color: #2E7D32;
@@ -491,10 +488,9 @@ RODAPÉ
   margin-bottom: 5px;
 }
 /* ===================================================
-RESPONSIVO
-Celular: até 600px
-Tablet: até 900px
-Acima disso: telas de computador (desktop)
+diferentes telas
+Celular 600px
+Tablet 900px
 =================================================== */
 /*tablets e telas médias*/
 @media (max-width: 900px) {
@@ -530,6 +526,7 @@ Acima disso: telas de computador (desktop)
     flex: 1 1 100%;
   }
 }
+/*fontes usadas no projeto inteiro*/
 @font-face {
   font-family: 'Yorkmade';
   src: url('./fontes/Yorkmade\ Demo.otf') format('opentype');
