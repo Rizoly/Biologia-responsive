@@ -6,8 +6,6 @@ O tema foi Archaea (Arqueias), apresentando informações sobre suas caracterís
 
 O objetivo do projeto foi aplicar conhecimentos de desenvolvimento web na criação de um material educativo, tornando o estudo das arqueias mais acessível e visualmente atrativo.
 
-Tecnologias utilizadas
-HTML5
-CSS3
+
 
 Feito pelos alunos do curso de Informatica Bruno Severo e Enzo F.F.
