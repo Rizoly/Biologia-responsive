@@ -170,7 +170,7 @@ cards gerais (aqueles que se repetem)
 }
 .card-agua p {
   font-weight: bold;
-  color: #2c3a44;
+  color: #000000;
 }
 .card-agua {
   background-image: url(./imagens/AguaTextura.jpg);
