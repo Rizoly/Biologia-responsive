@@ -81,15 +81,15 @@ menu nav e cabecalho
   font-family: Yorkmade;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.6rem;
+  gap: 1.3rem;
 }
 .menu a {
   background-color: white;
   color: #000000;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 2rem;
-  padding-left: 0.25rem;
-  padding-right: 0.2rem;
+  padding-left: 0.22rem;
+  padding-right: 0.18rem;
   padding-bottom: 0px;
   padding-top: 0px;
   transition: transform 0.5s ease, color 0.5s ease;
@@ -399,6 +399,131 @@ galeria das archeas
   margin-top: 8px;
 }
 /* ===================================================
+questoes sobre archaea (simulado)
+=================================================== */
+/* grade responsiva: 3 colunas no desktop, ultima questao centralizada */
+.grade-questoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.questao-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.questao-numero {
+  display: inline-block;
+  background-color: #eaf6f4;
+  color: #2E7D32;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.questao-enunciado {
+  font-size: 0.95rem;
+}
+.questao-pergunta {
+  font-weight: bold;
+  color: #0B2D4D;
+  font-size: 0.95rem;
+}
+.questao-lista {
+  margin: 8px 0;
+}
+.questao-lista li {
+  font-size: 0.95rem;
+  color: #4a5c68;
+  margin-bottom: 4px;
+}
+.alternativas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+.alternativa {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #DCE6ED;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #2c3a44;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.alternativa:hover {
+  background-color: #eaf6f4;
+  border-color: #26A69A;
+}
+/* apos responder, trava novos cliques na questao */
+.alternativas.respondida .alternativa {
+  pointer-events: none;
+}
+.alternativas.respondida .alternativa:not(.correta):not(.incorreta) {
+  opacity: 0.6;
+}
+.alternativa.correta {
+  border-color: #2E7D32;
+  background-color: #eaf6ec;
+  color: #1b5e20;
+  font-weight: bold;
+}
+.alternativa.incorreta {
+  border-color: #C62828;
+  background-color: #fdeaea;
+  color: #8e1c1c;
+  font-weight: bold;
+}
+/* efeito visual discreto no card apos a resposta */
+.questao-card.correta {
+  box-shadow: 0 4px 14px rgba(46, 125, 50, 0.25);
+}
+.questao-card.incorreta {
+  box-shadow: 0 4px 14px rgba(198, 40, 40, 0.25);
+}
+.questao-card.destaque {
+  position: relative;
+  z-index: 5;
+  transform: scale(1.1);
+}
+.questao-card.correta.destaque {
+  box-shadow: 0 10px 26px rgba(46, 125, 50, 0.3);
+}
+.questao-card.incorreta.destaque {
+  box-shadow: 0 10px 26px rgba(198, 40, 40, 0.3);
+}
+/* resultado final do simulado */
+.resultado-quiz {
+  display: none;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #DCE6ED;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(11, 45, 77, 0.08);
+}
+.resultado-quiz.mostrar {
+  display: block;
+}
+.resultado-quiz #resultado-texto {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0B2D4D;
+  margin-bottom: 15px;
+}
+.resultado-quiz .botao {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+/* ===================================================
 nos
 =================================================== */
 .autor-card {
@@ -497,6 +622,9 @@ Tablet 900px
   .secao {
     padding: 45px 0;
   }
+  .grade-questoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 /*celulares*/
 @media (max-width: 600px) {
@@ -524,6 +652,9 @@ Tablet 900px
   .galeria-card,
   .comparacao .coluna {
     flex: 1 1 100%;
+  }
+  .grade-questoes {
+    grid-template-columns: 1fr;
   }
 }
 /*fontes usadas no projeto inteiro*/
