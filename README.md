@@ -9,5 +9,6 @@ O objetivo do projeto foi aplicar conhecimentos de desenvolvimento web na criaç
 Tecnologias utilizadas
 HTML5
 CSS3
+JavaScript
 
 Feito pelos alunos do curso de Informatica Bruno Severo e Enzo Franzen Friske
