@@ -10,4 +10,4 @@ Tecnologias utilizadas
 HTML5
 CSS3
 
-Feito pelos alunos do curso de Informatica Bruno Severo e Enzo F.F.
+Feito pelos alunos do curso de Informatica Bruno Severo e Enzo Franzen Friske
