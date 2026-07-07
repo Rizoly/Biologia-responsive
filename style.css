@@ -63,6 +63,8 @@ menu nav e cabecalho
 .cabecalho {
   background-color: #0B2D4D;
   padding: 15px 0;
+  position:sticky;
+  top:0;
 }
 .cabecalho .container {
   max-width: 1500px;
@@ -82,8 +84,6 @@ menu nav e cabecalho
   display: flex;
   flex-wrap: wrap;
   gap: 1.3rem;
-  position:sticky;
-  top:0;
 }
 .menu a {
   background-color: white;
