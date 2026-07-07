@@ -82,6 +82,8 @@ menu nav e cabecalho
   display: flex;
   flex-wrap: wrap;
   gap: 1.3rem;
+  position:sticky;
+  top:0;
 }
 .menu a {
   background-color: white;
