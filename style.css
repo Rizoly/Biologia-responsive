@@ -26,14 +26,16 @@ ul {
 h1, h2, h3 {
   color: #0B2D4D;
   margin-bottom: 10px;
+  text-align:justify;
 }
 h1 { font-size: 2.4rem; }
 h2 { font-size: 2rem; }
-h3 { font-size: 1.4rem; }
+h3 { font-size: 1.6rem; }
 p {
   color: #4a5c68;
   margin-bottom: 8px;
   font-size: 1.4rem;
+  text-align: justify;
 }
 /* limita a largura do conteudo e centraliza na pagina */
 .container {
@@ -61,10 +63,12 @@ p {
 menu nav e cabecalho
 =================================================== */
 .cabecalho {
-  background: linear-gradient(to bottom, #00c6ff, #0072ff);
+  background: linear-gradient(120deg, #05af8a, #0e0cb4);
   padding: 15px 0;
   position:sticky;
   top:0;
+  z-index: 100;
+  transition: box-shadow 0.3s ease;
 }
 .cabecalho .container {
   max-width: 1500px;
@@ -99,6 +103,10 @@ menu nav e cabecalho
 .menu a:hover {
   color: #4FC3F7;
   transform: scale(1.1);
+}
+/* sombra que aparece no cabecalho quando a pagina rola (via JS) */
+.cabecalho.rolou {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 /* ===================================================
 banner principal (hero)
@@ -150,6 +158,34 @@ banner principal (hero)
 .botao-contorno:hover {
   transform: scale(1.1);
 }
+/* ===================================================
+faixa de palavras passando (ticker) - logo abaixo do banner
+=================================================== */
+.ticker-arqueias {
+  background-color: #0B2D4D;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+}
+.ticker-track {
+  display: inline-flex;
+  width: max-content;
+  gap: 40px;
+  animation: ticker-scroll 35s linear infinite;
+}
+.ticker-track span {
+  color: #cfe3f0;
+  font-family: Yorkmade;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.ticker-track .ponto {
+  color: #26A69A;
+}
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 /*===================================================
 cards gerais (aqueles que se repetem)
 =================================================== */
@@ -168,7 +204,7 @@ cards gerais (aqueles que se repetem)
   flex: 1 1 250px;
 }
 .card-agua h3 {
-  font-family: Boldone;
+  font-family: 'pixel';
 }
 .card-agua p {
   font-weight: bold;
@@ -190,7 +226,7 @@ cards gerais (aqueles que se repetem)
 }
 .card-vulcao h3 {
   color: #cfe3f0;
-  font-family: Boldone;
+  font-family: 'pixel';
 }
 .card-vulcao p {
   font-weight: bold;
@@ -212,7 +248,7 @@ cards gerais (aqueles que se repetem)
 }
 .card-alcalino h3 {
   color: #000000;
-  font-family: Boldone;
+  font-family: 'pixel';
 }
 .card-alcalino p {
   font-weight: bold;
@@ -234,7 +270,7 @@ cards gerais (aqueles que se repetem)
 }
 .card-solo h3 {
   color: #000000;
-  font-family: Boldone;
+  font-family: 'pixel';
 }
 .card-solo p {
   font-weight: bold;
@@ -255,7 +291,7 @@ cards gerais (aqueles que se repetem)
   transform: scale(1.1);
 }
 .card-humano h3 {
-  font-family: Boldone;
+  font-family: 'pixel';
 }
 .card-humano p {
   font-weight: bold;
@@ -275,13 +311,47 @@ cards gerais (aqueles que se repetem)
 .card-humano:hover {
   transform: scale(1.1);
 }
+/* ===================================================
+botao acrilico dos cards de habitat -> galeria das archeas
+=================================================== */
+.botao-galeria {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.botao-galeria:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.06);
+}
 .card {
   font-size: 1.8rem;
   margin-bottom: 8px;
-  display: block;
 }
 .card h3 {
-  font-family: Boldone;
+  font-family: pixel;
+  text-align: center;
+}
+.card p {
+  text-align: justify;
+  font-size: 1.5rem;
+}
+.questao-card .questao-enunciado {
+  text-align: justify;
+  text-size: 1.2rem;
+}
+.questao-card .questao-pergunta {
+  text-align: left;
 }
 .card-destaque {
   background: linear-gradient(180deg, #1565C0, #26a637, #2E7D32);
@@ -373,7 +443,7 @@ galeria das archeas
   border-radius: 12px;
   overflow: hidden;
   flex: 1 1 250px;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .galeria-card:hover {
   transform: scale(1.1);
@@ -400,6 +470,11 @@ galeria das archeas
   border-radius: 20px;
   margin-top: 8px;
 }
+/* destaque temporario no card da galeria quando o botao "ver na galeria" e clicado */
+.galeria-card.destaque-azul {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 4px rgba(21, 101, 192, 0.35), 0 10px 26px rgba(21, 101, 192, 0.45);
+}
 /* ===================================================
 questoes sobre archaea (simulado)
 =================================================== */
@@ -416,6 +491,7 @@ questoes sobre archaea (simulado)
 .questao-numero {
   display: inline-block;
   background-color: #eaf6f4;
+  font-family: 'Pixel';
   color: #2E7D32;
   font-size: 0.75rem;
   font-weight: bold;
@@ -539,11 +615,13 @@ nos
   font-family: SanguineFrost;
   color: #1d1d1d;
   font-size: 1.8rem;
+  text-align: center;
 }
 .autor-card .Eh3 {
-  font-family: Boldone;
+  font-family: 'pixel';
   color: #1d1d1d;
   font-size: 1.2rem;
+  text-align: center;
 }
 .avatar1{
   width: 80px;
@@ -615,6 +693,48 @@ rodape
   margin-bottom: 5px;
 }
 /* ===================================================
+animacoes gerais controladas via JS (script.js)
+=================================================== */
+/* fade-in aplicado a cards, galeria, timeline e comparacao ao rolar a pagina */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.reveal.mostrar {
+  opacity: 1;
+}
+/* botao flutuante "voltar ao topo", aparece apos rolar a pagina */
+.btn-topo {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #1565C0, #26A69A);
+  color: #ffffff;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(11, 45, 77, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  z-index: 999;
+}
+.btn-topo.mostrar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.btn-topo:hover {
+  transform: scale(1.1);
+}
+/* ===================================================
 diferentes telas
 Celular 600px
 Tablet 900px
@@ -658,6 +778,13 @@ Tablet 900px
   .grade-questoes {
     grid-template-columns: 1fr;
   }
+  .btn-topo {
+    width: 40px;
+    height: 40px;
+    right: 14px;
+    bottom: 14px;
+    font-size: 1.1rem;
+  }
 }
 /*fontes usadas no projeto inteiro*/
 @font-face {
@@ -665,10 +792,14 @@ Tablet 900px
   src: url('./fontes/Yorkmade\ Demo.otf') format('opentype');
 }
 @font-face {
-  font-family:'Boldone';
-  src: url(./fontes/Boldone.ttf) format('truetype');
-}
-@font-face {
   font-family:'SanguineFrost';
   src: url(./fontes/Sanguine\ Frost.ttf) format('truetype');
+}
+@font-face {
+  font-family: "Yuyu";
+  src: url(./fontes/Yuyu-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'pixel';
+  src: url(./fontes/GeistPixel-Regular-VariableFont_ELSH.ttf) format('truetype');
 }
