@@ -61,7 +61,7 @@ p {
 menu nav e cabecalho
 =================================================== */
 .cabecalho {
-  background-color: #0B2D4D;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
   padding: 15px 0;
   position:sticky;
   top:0;
