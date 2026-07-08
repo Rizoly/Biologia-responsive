@@ -348,7 +348,7 @@ botao acrilico dos cards de habitat -> galeria das archeas
 }
 .questao-card .questao-enunciado {
   text-align: justify;
-  text-size: 1.2rem;
+  font-size: 1.2rem;
 }
 .questao-card .questao-pergunta {
   text-align: left;
